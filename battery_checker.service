@@ -1,0 +1,10 @@
+[Unit]
+Description=Bash script that checks the system's battery at a certain interval
+Wants=getty.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/bash /usr/local/sbin/battery_checker -D
+
+[Install]
+WantedBy=default.target
